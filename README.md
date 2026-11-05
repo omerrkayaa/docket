@@ -6,6 +6,16 @@
 
 Docket, ekipler için rol tabanlı bir web uygulaması. Üyelik, yönetici/çalışan ayrımı, görev atama, önceliklendirme, Kanban takibi, yorum, geçmiş kaydı, filtreleme ve istatistik özelliklerini içeriyor. Demo modunda ve Supabase modunda çalışabiliyor.
 
+[![CI](https://github.com/omerrkayaa/docket/actions/workflows/ci.yml/badge.svg)](https://github.com/omerrkayaa/docket/actions/workflows/ci.yml)
+
+## Kısaca
+
+- **Erişim kontrolü veritabanında:** Supabase/PostgreSQL Row Level Security politikaları sayesinde yönetici ve çalışan ancak yetkili olduğu kaydı görür ve değiştirebilir. Normal kullanıcı kendi rolünü yükseltemez.
+- **Çevrimdışı çalışma:** PWA olarak bağlantı yokken de açılır. Değişiklikler önce cihaza yazılır, bağlantı gelince alan bazlı üç yönlü birleştirmeyle (taban, yerel, bulut) eşitlenir.
+- **Doküman asistanı (RAG):** görev eklerindeki PDF, DOCX ve TXT dosyaları hakkında soru yanıtlar. Arka uç, istek sınırıyla korunan bir Express API'dir ve erişim belirteci ister. Yetkisi olmayan kullanıcıya dokümanın var olup olmadığını bile belli etmez.
+- **Testler:** birleştirme motoru, yetkilendirme, istek sınırı ve doküman işleme için birim testleri; arayüz, çevrimdışı eşitleme ve PWA için Playwright testleri. Hepsi GitHub Actions'ta master'a her push'ta ve her PR'da çalışır.
+- **Teknolojiler:** Vanilla JavaScript, Supabase (Auth, PostgreSQL, RLS, pgvector), Express, Playwright, Docker.
+
 Bu dosya aynı zamanda projenin kullanım kılavuzu, teknik raporu, veritabanı dokümantasyonu, Supabase kurulum rehberi, test planı ve teslim kontrol listesi.
 
 ## 1. Projenin amacı
