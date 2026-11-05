@@ -8,6 +8,8 @@ Docket, ekipler için rol tabanlı bir web uygulaması. Üyelik, yönetici/çal�
 
 [![CI](https://github.com/omerrkayaa/docket/actions/workflows/ci.yml/badge.svg)](https://github.com/omerrkayaa/docket/actions/workflows/ci.yml)
 
+**Canlı demo:** [omerrkayaa.github.io/docket](https://omerrkayaa.github.io/docket/). Demo modunda çalışır: kurulum gerekmez, veriler yalnızca ziyaretçinin tarayıcısında tutulur. Giriş bilgileri giriş ekranının altında yazar.
+
 ## Kısaca
 
 - **Erişim kontrolü veritabanında:** Supabase/PostgreSQL Row Level Security politikaları sayesinde yönetici ve çalışan ancak yetkili olduğu kaydı görür ve değiştirebilir. Normal kullanıcı kendi rolünü yükseltemez.
