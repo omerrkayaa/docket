@@ -27,6 +27,8 @@ jobs:
           mkdir site
           cp index.html styles.css manifest.webmanifest sw.js register-sw.js app*.js supabase-config.js site/
           cp -r vendor icons site/
+          # Herkese açık demo: Supabase bilgisi verilmez, uygulama demo modunda (LocalStorage) açılır
+          echo 'window.TODO_PLUS_SUPABASE = {};' > site/supabase-config.js
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
